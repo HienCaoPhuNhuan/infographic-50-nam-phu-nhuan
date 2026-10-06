@@ -44,7 +44,7 @@ body {
     radial-gradient(circle at 92% 8%, rgba(224, 184, 77, 0.22), transparent 18%),
     linear-gradient(135deg, #fffef9 0%, #f7fbf7 52%, #f0f7f3 100%);
   box-shadow: var(--shadow);
-  padding: 14mm 13mm 11mm;
+  padding: 12mm 13mm 16mm;
 }
 
 .a4-page::before {
@@ -87,7 +87,7 @@ body {
   grid-template-columns: 1fr 36mm;
   gap: 8mm;
   align-items: start;
-  padding-bottom: 8mm;
+  padding-bottom: 5mm;
   border-bottom: 1.2mm solid var(--green-800);
 }
 
@@ -155,7 +155,7 @@ h1 span {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 6mm;
-  margin: 7mm 0;
+  margin: 5mm 0;
   padding: 5mm 6mm;
   color: #fff;
   background: var(--green-800);
@@ -170,8 +170,8 @@ h1 span {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.08fr 1fr 1fr;
-  gap: 4.5mm;
-  margin-bottom: 7mm;
+  gap: 3mm;
+  margin-bottom: 4mm;
 }
 
 .metric-card {
@@ -184,7 +184,7 @@ h1 span {
 
 .metric-card.major {
   grid-row: span 2;
-  min-height: 67mm;
+  min-height: 56mm;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,7 +263,7 @@ h1 span {
 }
 
 .timeline-panel {
-  padding: 6mm;
+  padding: 4mm;
   background: rgba(229, 243, 237, 0.72);
   border: 0.35mm solid var(--line);
 }
@@ -271,15 +271,15 @@ h1 span {
 .timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.5mm 5mm;
-  margin: 5mm 0 0;
+  gap: 2mm 5mm;
+  margin: 3mm 0 0;
   padding: 0;
   list-style: none;
 }
 
 .timeline li {
   position: relative;
-  min-height: 21mm;
+  min-height: 18mm;
   padding: 0 0 0 7mm;
   border-left: 1mm solid var(--gold-500);
 }
@@ -311,7 +311,7 @@ h1 span {
 }
 
 .page-header.compact {
-  margin-bottom: 6mm;
+  margin-bottom: 4mm;
   padding-bottom: 4mm;
   border-bottom: 1.1mm solid var(--green-800);
 }
@@ -343,7 +343,7 @@ h1 span {
 .student-panel,
 .teacher-panel,
 .club-panel {
-  padding: 5mm;
+  padding: 4mm;
 }
 
 .award-panel h3,
@@ -386,17 +386,17 @@ h1 span {
 
 .donut-panel {
   display: grid;
-  gap: 5mm;
+  gap: 3mm;
   align-content: start;
 }
 
 .big-ring {
   display: grid;
   place-items: center;
-  width: 64mm;
-  height: 64mm;
+  width: 54mm;
+  height: 54mm;
   margin: 0 auto;
-  padding: 9mm;
+  padding: 6mm;
   color: var(--green-900);
   text-align: center;
   border: 4mm solid var(--green-800);
@@ -422,7 +422,7 @@ h1 span {
 
 .small-stat-grid article {
   min-height: 23mm;
-  padding: 3.5mm;
+  padding: 2.5mm;
   background: var(--green-100);
   border-left: 1.2mm solid var(--gold-500);
 }
@@ -440,14 +440,14 @@ h1 span {
 }
 
 .student-panel {
-  margin-top: 5mm;
+  margin-top: 3mm;
 }
 
 .section-heading.horizontal {
   display: flex;
   gap: 5mm;
   align-items: baseline;
-  margin-bottom: 4mm;
+  margin-bottom: 2mm;
 }
 
 .portrait-cards {
@@ -458,7 +458,7 @@ h1 span {
 
 .portrait-cards article {
   min-height: 53mm;
-  padding: 4mm;
+  padding: 3mm;
   background: linear-gradient(180deg, #ffffff, #f2f8f5);
   border-bottom: 1.4mm solid var(--green-700);
 }
@@ -494,8 +494,8 @@ h1 span {
 }
 
 .academic-strip article {
-  min-height: 33mm;
-  padding: 4mm;
+  min-height: 27mm;
+  padding: 3mm;
   color: #fff;
   background: var(--green-800);
 }
@@ -508,7 +508,7 @@ h1 span {
 .academic-strip strong {
   margin-bottom: 1.5mm;
   color: var(--gold-500);
-  font-size: 17pt;
+  font-size: 15pt;
 }
 
 .academic-strip span {
@@ -619,7 +619,7 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4mm;
-  margin-top: 5mm;
+  margin-top: 3mm;
 }
 
 .four-blocks article {
@@ -643,8 +643,8 @@ h1 span {
   display: grid;
   grid-template-columns: 0.84fr 1.16fr;
   gap: 5mm;
-  margin-top: 5mm;
-  padding: 5mm;
+  margin-top: 3mm;
+  padding: 3mm;
   color: #fff;
   background: var(--green-900);
   border-color: var(--green-900);
@@ -652,7 +652,7 @@ h1 span {
 
 .summary-wall h3 {
   color: var(--gold-500);
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 .summary-wall p {
