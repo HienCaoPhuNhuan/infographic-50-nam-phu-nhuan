@@ -1,16 +1,16 @@
 :root {
-  --green-900: #063d3a;
-  --green-800: #07554d;
-  --green-700: #087265;
-  --green-100: #e5f3ed;
-  --gold-600: #c3922e;
-  --gold-500: #e0b84d;
-  --red-500: #b8413d;
-  --ink: #1e2a32;
-  --muted: #5b6871;
-  --paper: #fffdf7;
-  --line: #d9e2dc;
-  --shadow: 0 18px 40px rgba(10, 38, 34, 0.14);
+  --green-900: #25316d;
+  --green-800: #294c8c;
+  --green-700: #147fbd;
+  --green-100: #edf3fb;
+  --gold-600: #926522;
+  --gold-500: #e7bc5e;
+  --red-500: #d62c27;
+  --ink: #212b44;
+  --muted: #43516a;
+  --paper: #ffffff;
+  --line: #d9e2ef;
+  --shadow: 0 18px 40px rgba(37, 49, 109, 0.12);
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 html {
-  background: #dfe7e4;
+  background: #e8edf4;
   color: var(--ink);
   font-family: "Arial", "Helvetica", sans-serif;
   line-height: 1.35;
@@ -40,9 +40,7 @@ body {
   width: 210mm;
   height: 297mm;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 92% 8%, rgba(224, 184, 77, 0.22), transparent 18%),
-    linear-gradient(135deg, #fffef9 0%, #f7fbf7 52%, #f0f7f3 100%);
+  background: var(--paper);
   box-shadow: var(--shadow);
   padding: 12mm 13mm 16mm;
 }
@@ -51,19 +49,12 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  border: 4mm solid rgba(7, 85, 77, 0.08);
+  border: 3mm solid #edf3fb;
   pointer-events: none;
 }
 
 .a4-page::after {
-  content: "";
-  position: absolute;
-  right: -18mm;
-  bottom: -20mm;
-  width: 88mm;
-  height: 88mm;
-  border: 12mm solid rgba(7, 114, 101, 0.08);
-  border-radius: 50%;
+  content: none;
 }
 
 .masthead,
@@ -84,9 +75,9 @@ body {
 
 .masthead {
   display: grid;
-  grid-template-columns: 1fr 36mm;
-  gap: 8mm;
-  align-items: start;
+  grid-template-columns: minmax(0, 1fr) 49mm;
+  gap: 5mm;
+  align-items: center;
   padding-bottom: 5mm;
   border-bottom: 1.2mm solid var(--green-800);
 }
@@ -111,14 +102,14 @@ p {
 h1 {
   margin-bottom: 3mm;
   color: var(--green-900);
-  font-size: 32pt;
+  font-size: 28pt;
   line-height: 1.02;
   letter-spacing: 0;
 }
 
 h1 span {
   color: var(--red-500);
-  font-size: 23pt;
+  font-size: 20pt;
 }
 
 .subtitle {
@@ -128,27 +119,11 @@ h1 span {
   font-weight: 700;
 }
 
-.anniversary-badge {
-  display: grid;
-  place-items: center;
-  width: 35mm;
-  height: 35mm;
-  color: #fff;
-  background: linear-gradient(145deg, var(--green-800), var(--green-700));
-  border: 1.4mm solid var(--gold-500);
-  border-radius: 50%;
-  text-align: center;
-}
-
-.anniversary-badge strong {
+.anniversary-logo {
   display: block;
-  font-size: 35pt;
-  line-height: 0.9;
-}
-
-.anniversary-badge span {
-  font-weight: 800;
-  text-transform: uppercase;
+  width: 49mm;
+  height: auto;
+  object-fit: contain;
 }
 
 .intro-band {
@@ -169,27 +144,27 @@ h1 span {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.08fr 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 3mm;
   margin-bottom: 4mm;
 }
 
 .metric-card {
-  min-height: 31mm;
-  padding: 4.2mm;
+  display: grid;
+  grid-template-columns: 12mm minmax(0, 1fr);
+  column-gap: 3mm;
+  align-content: center;
+  min-height: 36mm;
+  padding: 3.5mm;
   background: rgba(255, 255, 255, 0.82);
   border: 0.35mm solid var(--line);
   border-top: 1.4mm solid var(--gold-500);
 }
 
 .metric-card.major {
-  grid-row: span 2;
-  min-height: 56mm;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 36mm;
   color: #fff;
-  background: linear-gradient(160deg, var(--green-900), var(--green-700));
+  background: var(--green-900);
   border-color: var(--green-900);
 }
 
@@ -197,16 +172,17 @@ h1 span {
   display: block;
   margin: 2mm 0 1mm;
   color: var(--green-900);
-  font-size: 19pt;
+  font-size: 21pt;
   line-height: 1.04;
 }
 
 .metric-card.major strong {
   color: #fff;
-  font-size: 58pt;
+  font-size: 42pt;
 }
 
 .metric-card p {
+  grid-column: 2;
   margin: 0;
   color: var(--muted);
   font-size: 9.5pt;
@@ -214,33 +190,23 @@ h1 span {
 }
 
 .metric-card.major p {
-  color: #f7f2de;
-  font-size: 13pt;
+  color: #ffffff;
+  font-size: 9.5pt;
 }
 
 .metric-icon,
 .mini-icon {
   display: inline-block;
-  width: 8mm;
-  height: 8mm;
-  border: 0.7mm solid currentColor;
-  color: var(--gold-600);
+  width: 10mm;
+  height: 10mm;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.metric-card.major .metric-icon {
-  color: var(--gold-500);
-  width: 11mm;
-  height: 11mm;
+.metric-icon {
+  grid-row: span 2;
+  align-self: center;
 }
-
-.icon-book { border-radius: 1mm 4mm 4mm 1mm; }
-.icon-people { border-radius: 50%; box-shadow: 5mm 0 0 -1.6mm currentColor; }
-.icon-school { clip-path: polygon(50% 0, 100% 38%, 100% 100%, 0 100%, 0 38%); }
-.icon-team { border-radius: 2mm; transform: rotate(45deg); }
-.icon-medal { border-radius: 50%; }
-.icon-flag { border-radius: 0; clip-path: polygon(0 0, 86% 0, 68% 34%, 86% 68%, 0 68%); }
-.icon-digital { border-radius: 1mm; }
-.icon-star { clip-path: polygon(50% 0, 62% 35%, 100% 35%, 69% 56%, 81% 94%, 50% 72%, 19% 94%, 31% 56%, 0 35%, 38% 35%); }
 
 .section-heading p {
   margin-bottom: 1mm;
@@ -264,7 +230,7 @@ h1 span {
 
 .timeline-panel {
   padding: 4mm;
-  background: rgba(229, 243, 237, 0.72);
+  background: var(--green-100);
   border: 0.35mm solid var(--line);
 }
 
@@ -368,8 +334,8 @@ h1 span {
 }
 
 .mini-icon {
-  width: 6mm;
-  height: 6mm;
+  width: 8mm;
+  height: 8mm;
   margin-top: 0.8mm;
 }
 
@@ -459,7 +425,7 @@ h1 span {
 .portrait-cards article {
   min-height: 53mm;
   padding: 3mm;
-  background: linear-gradient(180deg, #ffffff, #f2f8f5);
+  background: #f4f7fc;
   border-bottom: 1.4mm solid var(--green-700);
 }
 
@@ -525,11 +491,11 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3mm;
-  margin: 4mm 0;
+  margin: 3mm 0;
 }
 
 .teacher-stats article {
-  padding: 4mm;
+  padding: 3mm;
   color: #fff;
   background: var(--green-800);
 }
@@ -574,7 +540,7 @@ h1 span {
 
 .club-panel {
   color: #fff;
-  background: linear-gradient(155deg, var(--green-900), var(--green-700));
+  background: var(--green-800);
 }
 
 .club-number {
@@ -597,7 +563,7 @@ h1 span {
 
 .club-lead {
   margin: 4mm 0;
-  color: #eef7ef;
+  color: #ffffff;
   font-size: 10pt;
 }
 
@@ -657,7 +623,7 @@ h1 span {
 
 .summary-wall p {
   margin: 0;
-  color: #e8f4ef;
+  color: #ffffff;
   font-size: 9.2pt;
 }
 
@@ -698,14 +664,50 @@ h1 span {
   .sheet-stack {
     padding: 10px;
     gap: 14px;
+    justify-content: start;
+    width: max-content;
+    min-width: 100%;
   }
 
   .a4-page {
-    width: min(100%, 210mm);
+    width: 210mm;
     height: auto;
     min-height: 297mm;
     transform-origin: top center;
   }
+}
+
+.intro-band p,
+.metric-card p,
+.timeline span,
+.award-list p,
+.portrait-cards p,
+.academic-strip span,
+.check-list li,
+.club-lead,
+.four-blocks p,
+.summary-wall p {
+  text-align: justify;
+  text-align-last: left;
+  text-wrap: pretty;
+  word-spacing: -0.15px;
+  letter-spacing: 0;
+  hyphens: none;
+}
+
+.teacher-stats span,
+.small-stat-grid span,
+.summary-metrics span {
+  text-wrap: pretty;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, .subtitle, .metric-card strong {
+  text-wrap: balance;
+}
+
+@media print {
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
 
 @page {
