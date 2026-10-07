@@ -1,4 +1,8 @@
-(() => {
+(async () => {
+  await Promise.all([
+    document.fonts.load('400 12px "Noto Sans"'),
+    document.fonts.load('700 12px "Noto Sans"'),
+  ]);
   // Keep names and common Vietnamese compounds together after content edits.
   const phrases = [
     'Hồ Chí Minh', 'Hoàng Minh Giám', 'Nguyễn Hải Đăng', 'Phạm Minh Dũng',
@@ -9,10 +13,10 @@
     'Hiệu trưởng', 'Đại học', 'Cao đẳng', 'Thạc sĩ', 'thi đua',
     'Tin học', 'Văn phòng', 'Trí tuệ', 'nhân tạo', 'khoa học',
     'kỹ thuật', 'thể thao', 'nghệ thuật', 'kỹ năng', 'học thuật',
-    'năng khiếu', 'Cây Mùa Xuân', 'Áo dài', 'Taekwondo',
+    'năng khiếu', 'Cây Mùa Xuân', 'Áo dài', 'Taekwondo', 'mỗi năm',
   ].sort((a, b) => b.length - a.length);
   const escaped = phrases.map(p => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-  const pattern = new RegExp(`(?<![\\p{L}\\p{N}])(?:${escaped.join('|')})(?![\\p{L}\\p{N}])`, 'gu');
+  const pattern = new RegExp(`(?<![\\p{L}\\p{N}])(?:${escaped.join('|')})(?![\\p{L}\\p{N}])[.,;:!?]?`, 'gu');
   const walker = document.createTreeWalker(document.querySelector('main'), NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (walker.nextNode()) nodes.push(walker.currentNode);
@@ -80,4 +84,5 @@
     }
     element.style.fontSize = `${bestSize}px`;
   }
+  document.documentElement.dataset.typographyReady = 'true';
 })();

@@ -1,5 +1,13 @@
 @font-face {
-  font-family: "Noto Sans Labels";
+  font-family: "Noto Sans";
+  src: url("assets/fonts/noto-sans-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
   src: url("assets/fonts/noto-sans-bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
@@ -28,7 +36,8 @@
 html {
   background: #e8edf4;
   color: var(--ink);
-  font-family: "Arial", "Helvetica", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-synthesis: none;
   line-height: 1.35;
 }
 
@@ -50,7 +59,7 @@ body {
   overflow: hidden;
   background: var(--paper);
   box-shadow: var(--shadow);
-  padding: 12mm 13mm 16mm;
+  padding: 12mm 13mm 10mm;
 }
 
 .a4-page::before {
@@ -75,8 +84,7 @@ body {
 .academic-strip,
 .people-layout,
 .four-blocks,
-.summary-wall,
-.page-footer {
+.summary-wall {
   position: relative;
   z-index: 1;
 }
@@ -275,7 +283,7 @@ h1 span {
   margin-bottom: 1mm;
   color: var(--green-900);
   font-size: 11pt;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .timeline span {
@@ -385,7 +393,7 @@ h1 span {
 
 .big-ring span {
   font-size: 9.5pt;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .small-stat-grid {
@@ -444,7 +452,7 @@ h1 span {
   color: #fff;
   background: var(--red-500);
   font-size: 7.6pt;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -566,7 +574,7 @@ h1 span {
 
 .club-number span {
   font-size: 14pt;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .club-lead {
@@ -586,7 +594,7 @@ h1 span {
   color: var(--green-900);
   background: #fff;
   font-size: 8.2pt;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .four-blocks {
@@ -654,20 +662,6 @@ h1 span {
   font-size: 12pt;
 }
 
-.page-footer {
-  position: absolute;
-  left: 13mm;
-  right: 13mm;
-  bottom: 7mm;
-  display: flex;
-  justify-content: space-between;
-  color: var(--muted);
-  font-size: 8.2pt;
-  font-weight: 700;
-  border-top: 0.3mm solid var(--line);
-  padding-top: 2mm;
-}
-
 @media screen and (max-width: 900px) {
   .sheet-stack {
     padding: 10px;
@@ -729,7 +723,7 @@ h1, h2, h3, h4, .subtitle, .metric-card strong {
 
 .eyebrow,
 .section-heading > p {
-  font-family: "Noto Sans Labels", "Arial", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   font-synthesis: none;
   line-height: 1.4;
