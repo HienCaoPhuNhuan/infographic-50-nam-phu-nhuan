@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Noto Sans Labels";
+  src: url("assets/fonts/noto-sans-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --green-900: #25316d;
   --green-800: #294c8c;
@@ -86,7 +94,7 @@ body {
   margin: 0 0 3mm;
   color: var(--gold-600);
   font-size: 9pt;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -211,8 +219,8 @@ h1 span {
 .section-heading p {
   margin-bottom: 1mm;
   color: var(--gold-600);
-  font-size: 8.5pt;
-  font-weight: 900;
+  font-size: 9pt;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -717,6 +725,17 @@ h1, h2, h3, h4, .subtitle, .metric-card strong {
   background: none;
   word-spacing: 0;
   vertical-align: baseline;
+}
+
+.eyebrow,
+.section-heading > p {
+  font-family: "Noto Sans Labels", "Arial", sans-serif;
+  font-weight: 700;
+  font-synthesis: none;
+  line-height: 1.4;
+  text-align: left;
+  text-wrap: balance;
+  word-spacing: 0;
 }
 
 @media print {
